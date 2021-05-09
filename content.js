@@ -46,8 +46,6 @@ const getEndDate = (dateText) => dateText.substr(27, 51)
 
 const convertStringToDate = (dateString) => new Date(Date.parse(dateString))
 
-const getOldTable = () => document.getElementById('dataDiv')
-
 const isSubmitted = (content) => {
 	const contentHtml = content.getElementsByTagName('td')
 	if (contentHtml.length > 1) {

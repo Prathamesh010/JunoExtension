@@ -2,8 +2,9 @@
 	"manifest_version": 2,
 
 	"name": "can i still afford to procastinate?",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Juno extensions for assignments",
+	"author": "Prathamesh Gawas",
 
 	"content_scripts": [
 		{
