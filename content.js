@@ -4,6 +4,7 @@ const getAssignemntObjects = () => {
 		.getElementById('dataDiv')
 		.getElementsByTagName('tbody')
 
+	console.log(table)
 	for (i = 1; i < table.item(0).rows.length; i++) {
 		var objCells = table.item(0).rows.item(i)
 		obj.push(objCells)
@@ -14,7 +15,7 @@ const getAssignemntObjects = () => {
 
 const modifiedHtml = (content, color) => {
 	const contentHtml = content.getElementsByTagName('td')
-	console.log(color)
+	// console.log(color)
 	contentHtml.item(0).style = `text-align:right; background-color: ${color}`
 }
 
@@ -26,13 +27,13 @@ const getDateString = (dateObj) => {
 const calulateUrgency = (date) => {
 	const now = new Date()
 	const diff = Math.round((date - now) / (1000 * 60 * 60 * 24))
-	console.log(diff)
+	// console.log(diff)
 	var urgencyRank = -1
 	if (diff <= 1) urgencyRank = 1
 	else if (diff <= 2) urgencyRank = 2
 	else if (diff >= 2) urgencyRank = 3
 	else urgencyRank = 4
-	console.log(urgencyRank)
+	// console.log(urgencyRank)
 	return urgencyRank - 1
 }
 
@@ -61,7 +62,7 @@ const main = () => {
 	const obj = getAssignemntObjects()
 	for (var i = 0; i < obj.length; i++) {
 		const dateStr = getDateString(obj[i])
-		console.log(`datestr : ${dateStr}`)
+		// console.log(`datestr : ${dateStr}`)
 		if (dateStr && !isSubmitted(obj[i])) {
 			const deadline = convertStringToDate(getEndDate(dateStr))
 			const urgencyRank = calulateUrgency(deadline)
@@ -71,4 +72,4 @@ const main = () => {
 	}
 }
 
-main()
+setTimeout(main, 2000)

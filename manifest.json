@@ -1,14 +1,19 @@
 {
 	"manifest_version": 2,
 
-	"name": "Modify CSS and HTML",
+	"name": "can i still afford to procastinate?",
 	"version": "0.1.0",
-	"description": "Lateral blog post demo extension",
+	"description": "Juno extensions for assignments",
 
 	"content_scripts": [
 		{
 			"js": ["content.js"],
-			"matches": ["https://siesedu.in/home.htm"]
+			"matches": ["https://siesedu.in/*"],
+			"run_at": "document_end"
 		}
-	]
+	],
+
+	"icons": {
+		"128": "/images/pepe.png"
+	}
 }
