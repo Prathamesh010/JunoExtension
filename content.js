@@ -4,8 +4,7 @@ const getAssignemntObjects = () => {
 		.getElementById('dataDiv')
 		.getElementsByTagName('tbody')
 
-	console.log(table)
-	for (i = 1; i < table.item(0).rows.length; i++) {
+	for (i = 0; i < table.item(0).rows.length; i++) {
 		var objCells = table.item(0).rows.item(i)
 		obj.push(objCells)
 	}
