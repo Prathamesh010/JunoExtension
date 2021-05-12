@@ -1,7 +1,7 @@
 const getAssignemntObjects = () => {
 	var obj = []
 	const table = document
-		.getElementById('dataDiv')
+		.getElementById('assessmentsDiv1')
 		.getElementsByTagName('tbody')
 
 	for (i = 0; i < table.item(0).rows.length; i++) {
