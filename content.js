@@ -41,7 +41,10 @@ const getColor = (urgencyRank) => {
 	return colors[urgencyRank]
 }
 
-const getEndDate = (dateText) => dateText.substr(27, 51)
+const getEndDate = (datestr) => {
+    if (parseInt(datestr.substr(31, 2)) > 15) return "May 15, 2021 11:55:00 PM"
+    else return datestr.substr(27,24)
+}
 
 const convertStringToDate = (dateString) => new Date(Date.parse(dateString))
 
