@@ -25,7 +25,7 @@ const getDateString = (dateObj) => {
 
 const calulateUrgency = (date) => {
 	const now = new Date()
-	const diff = Math.round((date - now) / (1000 * 60 * 60 * 24))
+	const diff = Math.ceil((date - now) / (1000 * 60 * 60 * 24))
 	// console.log(diff)
 	var urgencyRank = -1
 	if (diff <= 1) urgencyRank = 1
